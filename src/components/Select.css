@@ -1,0 +1,137 @@
+/* ==========================================================================
+   Select 컴포넌트 스타일
+   상세서.md Section 5.5 기반
+   ========================================================================== */
+
+.select-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    position: relative;
+}
+
+.select-label {
+    font: var(--text-caption);
+    color: var(--color-text);
+}
+
+.select-required {
+    color: var(--color-danger);
+    margin-left: 2px;
+}
+
+.select-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--input-height);
+    padding: 0 var(--input-padding-x);
+    font: var(--text-body);
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-input);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: left;
+}
+
+.select-trigger:hover:not(:disabled) {
+    border-color: var(--color-border-strong);
+}
+
+.select-trigger:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-focus);
+}
+
+.select-trigger.open {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-focus);
+}
+
+.select-trigger.error {
+    border-color: var(--color-danger);
+}
+
+.select-trigger:disabled {
+    background: var(--color-surface-2);
+    color: var(--color-text-subtle);
+    cursor: not-allowed;
+}
+
+.select-value {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.select-placeholder {
+    flex: 1;
+    color: var(--color-text-subtle);
+}
+
+.select-arrow {
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.select-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+/* Dropdown */
+.select-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: var(--space-1);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-input);
+    box-shadow: var(--shadow-lg);
+    max-height: 280px;
+    overflow-y: auto;
+    z-index: 50;
+    list-style: none;
+    padding: var(--space-1);
+}
+
+.select-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: 0 var(--space-3);
+    font: var(--text-body);
+    color: var(--color-text);
+    border-radius: calc(var(--radius-input) - 2px);
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.select-option:hover,
+.select-option.focused {
+    background: var(--color-surface-2);
+}
+
+.select-option.selected {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.select-option svg {
+    color: var(--color-primary);
+}
+
+.select-error {
+    font: var(--text-caption);
+    color: var(--color-danger);
+}

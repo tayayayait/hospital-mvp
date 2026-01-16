@@ -1,0 +1,190 @@
+/* ==========================================================================
+   케이스 상세 페이지 스타일
+   상세서.md Section 7.7 기반
+   ========================================================================== */
+
+.case-detail {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+/* Header */
+.case-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.case-detail-header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.case-detail-title {
+    font: var(--text-display);
+    color: var(--color-text);
+    margin: 0;
+}
+
+.case-detail-subtitle {
+    font: var(--text-body);
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.case-detail-header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+/* Content Layout */
+.case-detail-content {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: var(--space-6);
+}
+
+.case-detail-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.case-detail-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-4);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.info-label {
+    font: var(--text-caption);
+    color: var(--color-text-muted);
+}
+
+.info-value {
+    font: var(--text-body-m);
+    color: var(--color-text);
+}
+
+/* Info List */
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.info-row:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* Result Summary */
+.result-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-risk {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.result-score {
+    font: var(--text-h2);
+    color: var(--color-text);
+}
+
+/* Memo Form */
+.memo-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.memo-input {
+    width: 100%;
+    padding: var(--space-3);
+    font: var(--text-body);
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-input);
+    resize: vertical;
+    min-height: 80px;
+}
+
+.memo-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-focus);
+}
+
+.memo-input::placeholder {
+    color: var(--color-text-subtle);
+}
+
+.memo-form .btn {
+    align-self: flex-end;
+}
+
+/* Danger Zone */
+.danger-zone {
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .case-detail-content {
+        grid-template-columns: 1fr;
+    }
+
+    .case-detail-sidebar {
+        order: -1;
+    }
+}
+
+@media (max-width: 767px) {
+    .case-detail-header {
+        flex-direction: column;
+    }
+
+    .case-detail-header-right {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

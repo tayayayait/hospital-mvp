@@ -1,0 +1,347 @@
+/* ==========================================================================
+   분석 결과 페이지 스타일 (고도화)
+   상세서.md Section 7.6 기반
+   ========================================================================== */
+
+.analysis-result {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+/* 헤더 */
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.result-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.result-risk-display {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.result-score {
+    font: var(--text-h1);
+    color: var(--color-text);
+}
+
+.result-title {
+    font: var(--text-display);
+    color: var(--color-text);
+    margin: 0;
+}
+
+.result-meta {
+    font: var(--text-caption);
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.result-header-actions {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+/* 응급 배너 */
+.emergency-banner {
+    display: flex;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background: var(--color-risk-high-bg);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    border-radius: var(--radius-card);
+}
+
+.emergency-banner svg {
+    color: var(--color-danger);
+    flex-shrink: 0;
+}
+
+.emergency-banner strong {
+    font: var(--text-body-m);
+    color: var(--color-danger);
+    display: block;
+    margin-bottom: var(--space-1);
+}
+
+.emergency-banner p {
+    font: var(--text-body);
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* 콘텐츠 그리드 */
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-6);
+}
+
+.result-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.result-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* 근거 리스트 */
+.factors-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.factor-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.factor-item:last-child {
+    border-bottom: none;
+}
+
+.factor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: var(--space-3) 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-family);
+}
+
+.factor-header:hover {
+    background: var(--color-surface-2);
+    margin: 0 calc(-1 * var(--space-4));
+    padding: var(--space-3) var(--space-4);
+    width: calc(100% + var(--space-4) * 2);
+}
+
+.factor-title-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.factor-title {
+    font: var(--text-body-m);
+    color: var(--color-text);
+}
+
+.factor-confidence {
+    font: var(--text-caption);
+    color: var(--color-text-muted);
+}
+
+.factor-header svg {
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+}
+
+.factor-description {
+    font: var(--text-body);
+    color: var(--color-text-muted);
+    margin: 0;
+    padding: 0 0 var(--space-3) 0;
+    line-height: 1.6;
+}
+
+/* 권고사항 리스트 */
+.recommendations-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.recommendation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+}
+
+.recommendation-text {
+    font: var(--text-body);
+    color: var(--color-text);
+    flex: 1;
+}
+
+/* 감별 진단 */
+.diagnosis-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.diagnosis-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.diagnosis-name {
+    font: var(--text-body);
+    color: var(--color-text);
+}
+
+.diagnosis-bar-container {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.diagnosis-bar {
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 4px;
+    min-width: 4px;
+}
+
+.diagnosis-probability {
+    font: var(--text-caption);
+    color: var(--color-text-muted);
+    min-width: 36px;
+}
+
+/* 기술 정보 */
+.tech-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.tech-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tech-label {
+    font: var(--text-caption);
+    color: var(--color-text-muted);
+}
+
+.tech-value {
+    font: var(--text-body);
+    color: var(--color-text);
+}
+
+/* 면책 조항 */
+.disclaimer {
+    display: flex;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: var(--color-surface-2);
+    border-radius: var(--radius-input);
+    border-left: 3px solid var(--color-warning);
+}
+
+.disclaimer svg {
+    color: var(--color-warning);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.disclaimer p {
+    font: var(--text-body);
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 하단 액션 */
+.result-actions {
+    display: flex;
+    gap: var(--space-3);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+}
+
+/* 공유 모달 */
+.share-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.share-description {
+    font: var(--text-body);
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* 반응형 */
+@media (max-width: 1023px) {
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .result-header {
+        flex-direction: column;
+    }
+
+    .result-header-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+/* 인쇄 스타일 */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    .analysis-result {
+        padding: 0;
+        gap: 16pt;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emergency-banner {
+        break-inside: avoid;
+    }
+
+    .card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    .factor-header:hover {
+        background: none;
+        margin: 0;
+        padding: var(--space-3) 0;
+        width: 100%;
+    }
+}

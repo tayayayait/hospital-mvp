@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Input 컴포넌트 스타일
+   상세서.md Section 5.3 기반
+   ========================================================================== */
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.input-label {
+    font: var(--text-caption);
+    color: var(--color-text);
+}
+
+.input-required {
+    color: var(--color-danger);
+    margin-left: 2px;
+}
+
+.input-helper {
+    font: var(--text-caption);
+    color: var(--color-text-subtle);
+}
+
+.input {
+    height: var(--input-height);
+    padding: 0 var(--input-padding-x);
+    font: var(--text-body);
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-input);
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.input-large {
+    height: var(--input-height-lg);
+}
+
+.input::placeholder {
+    color: var(--color-text-subtle);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-focus);
+}
+
+.input:disabled {
+    background: var(--color-surface-2);
+    color: var(--color-text-subtle);
+    cursor: not-allowed;
+}
+
+/* Error State */
+.input.input-error {
+    border-color: var(--color-danger);
+}
+
+.input.input-error:focus {
+    box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
+}
+
+.input-error-message {
+    font: var(--text-caption);
+    color: var(--color-danger);
+}
+
+/* Success State */
+.input.input-success {
+    border-color: var(--color-success);
+}
+
+.input.input-success:focus {
+    box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.2);
+}

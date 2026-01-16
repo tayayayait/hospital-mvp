@@ -1,0 +1,275 @@
+/* ==========================================================================
+   의료 AI 서비스 MVP - 글로벌 스타일
+   ========================================================================== */
+
+@import './tokens.css';
+
+/* ========================================
+   CSS Reset & Base
+   ======================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font: var(--text-body);
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* ========================================
+   Typography Utility Classes
+   ======================================== */
+.text-display {
+    font: var(--text-display);
+}
+
+.text-h1 {
+    font: var(--text-h1);
+}
+
+.text-h2 {
+    font: var(--text-h2);
+}
+
+.text-h3 {
+    font: var(--text-h3);
+}
+
+.text-body {
+    font: var(--text-body);
+}
+
+.text-body-m {
+    font: var(--text-body-m);
+}
+
+.text-caption {
+    font: var(--text-caption);
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.text-subtle {
+    color: var(--color-text-subtle);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-success {
+    color: var(--color-success);
+}
+
+.text-warning {
+    color: var(--color-warning);
+}
+
+.text-danger {
+    color: var(--color-danger);
+}
+
+/* ========================================
+   Links
+   ======================================== */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* ========================================
+   Focus Styles (접근성)
+   ======================================== */
+:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   Scrollbar (선택적)
+   ======================================== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-surface-2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border-strong);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-subtle);
+}
+
+/* ========================================
+   Selection
+   ======================================== */
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+/* ========================================
+   Visually Hidden (스크린리더 전용)
+   ======================================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-1 {
+    gap: var(--space-1);
+}
+
+.gap-2 {
+    gap: var(--space-2);
+}
+
+.gap-3 {
+    gap: var(--space-3);
+}
+
+.gap-4 {
+    gap: var(--space-4);
+}
+
+.gap-6 {
+    gap: var(--space-6);
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.p-3 {
+    padding: var(--space-3);
+}
+
+.p-4 {
+    padding: var(--space-4);
+}
+
+.p-6 {
+    padding: var(--space-6);
+}
+
+.mt-2 {
+    margin-top: var(--space-2);
+}
+
+.mt-4 {
+    margin-top: var(--space-4);
+}
+
+.mt-6 {
+    margin-top: var(--space-6);
+}
+
+.mb-2 {
+    margin-bottom: var(--space-2);
+}
+
+.mb-4 {
+    margin-bottom: var(--space-4);
+}
+
+.mb-6 {
+    margin-bottom: var(--space-6);
+}
+
+.rounded-input {
+    border-radius: var(--radius-input);
+}
+
+.rounded-card {
+    border-radius: var(--radius-card);
+}
+
+.rounded-modal {
+    border-radius: var(--radius-modal);
+}
+
+.rounded-pill {
+    border-radius: var(--radius-pill);
+}
+
+.shadow-sm {
+    box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+    box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+    box-shadow: var(--shadow-lg);
+}

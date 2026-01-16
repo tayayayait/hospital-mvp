@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Badge 컴포넌트 스타일
+   상세서.md Section 5.10 기반
+   ========================================================================== */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 500;
+    white-space: nowrap;
+    border-radius: var(--radius-pill);
+}
+
+/* Sizes */
+.badge-sm {
+    height: 20px;
+    padding: 0 6px;
+    font-size: 11px;
+}
+
+.badge-md {
+    height: 24px;
+    padding: 0 var(--space-2);
+    font-size: 12px;
+}
+
+/* Variants */
+.badge-default {
+    background: var(--color-surface-2);
+    color: var(--color-text-muted);
+}
+
+.badge-info {
+    background: rgba(14, 165, 233, 0.15);
+    color: var(--color-info);
+}
+
+.badge-success {
+    background: rgba(22, 163, 74, 0.15);
+    color: var(--color-success);
+}
+
+.badge-warning {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--color-warning);
+}
+
+.badge-danger {
+    background: rgba(220, 38, 38, 0.15);
+    color: var(--color-danger);
+}
+
+/* Risk Variants */
+.badge-risk-low {
+    background: var(--color-risk-low-bg);
+    color: var(--color-risk-low-text);
+}
+
+.badge-risk-medium {
+    background: var(--color-risk-medium-bg);
+    color: var(--color-risk-medium-text);
+}
+
+.badge-risk-high {
+    background: var(--color-risk-high-bg);
+    color: var(--color-risk-high-text);
+}

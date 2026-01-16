@@ -1,0 +1,116 @@
+/* ==========================================================================
+   설정 페이지 스타일
+   상세서.md Section 7.8 기반
+   ========================================================================== */
+
+.settings-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+/* Header */
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settings-title {
+    font: var(--text-display);
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* Tabs */
+.settings-tabs {
+    display: flex;
+    gap: var(--space-1);
+    padding: var(--space-1);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+}
+
+.settings-tab {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    font: var(--text-body-m);
+    font-family: var(--font-family);
+    color: var(--color-text-muted);
+    background: none;
+    border: none;
+    border-radius: calc(var(--radius-card) - 4px);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.settings-tab:hover {
+    background: var(--color-surface-2);
+    color: var(--color-text);
+}
+
+.settings-tab.active {
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+/* Content */
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.settings-card {
+    max-width: 800px;
+}
+
+/* Info Box */
+/* Info Box, Readonly Grid, Form 스타일 제거됨 (AI 설정 삭제로 인한 정리) */
+
+/* Table Actions */
+.table-actions {
+    display: flex;
+    gap: var(--space-1);
+}
+
+/* Audit Filter */
+.audit-filter {
+    margin-bottom: var(--space-4);
+    max-width: 400px;
+}
+
+/* User Form */
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .settings-tabs {
+        flex-wrap: wrap;
+    }
+
+    .settings-tab {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .settings-tab span {
+        display: none;
+    }
+
+    .settings-form-row,
+    .settings-readonly-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-card {
+        max-width: none;
+    }
+}

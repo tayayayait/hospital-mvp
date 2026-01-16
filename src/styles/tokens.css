@@ -1,0 +1,136 @@
+/* ==========================================================================
+   의료 AI 서비스 MVP - 디자인 토큰
+   상세서.md Section 3 기반
+   ========================================================================== */
+
+:root {
+  /* ========================================
+     3.1 컬러 팔레트
+     ======================================== */
+  
+  /* Neutral (기본) */
+  --color-bg: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #F1F5F9;
+  --color-border: #E2E8F0;
+  --color-border-strong: #CBD5E1;
+  --color-text: #0F172A;
+  --color-text-muted: #475569;
+  --color-text-subtle: #64748B;
+
+  /* Brand/Action */
+  --color-primary: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-primary-active: #1E40AF;
+  --color-on-primary: #FFFFFF;
+  --color-secondary: #14B8A6;
+  --color-secondary-hover: #0D9488;
+  --color-secondary-active: #0F766E;
+  --color-focus: #93C5FD;
+
+  /* Semantic (상태) */
+  --color-success: #16A34A;
+  --color-warning: #F59E0B;
+  --color-danger: #DC2626;
+  --color-info: #0EA5E9;
+  --color-overlay: rgba(15, 23, 42, 0.55);
+
+  /* Risk Badge */
+  --color-risk-low-bg: #DCFCE7;
+  --color-risk-low-text: #166534;
+  --color-risk-medium-bg: #FEF3C7;
+  --color-risk-medium-text: #92400E;
+  --color-risk-high-bg: #FEE2E2;
+  --color-risk-high-text: #991B1B;
+
+  /* ========================================
+     3.2 타이포그래피
+     ======================================== */
+  --font-family: "Pretendard Variable", Pretendard, "Noto Sans KR", Inter, 
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+    "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif;
+
+  /* Text Styles */
+  --text-display: 600 24px/32px var(--font-family);
+  --text-h1: 600 20px/28px var(--font-family);
+  --text-h2: 600 18px/26px var(--font-family);
+  --text-h3: 600 16px/24px var(--font-family);
+  --text-body: 400 14px/22px var(--font-family);
+  --text-body-m: 500 14px/22px var(--font-family);
+  --text-caption: 400 12px/18px var(--font-family);
+
+  /* ========================================
+     3.3 스페이싱 (8pt 기반 + 4pt 보조)
+     ======================================== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  /* ========================================
+     3.4 라운드/섀도우
+     ======================================== */
+  --radius-input: 10px;
+  --radius-card: 12px;
+  --radius-modal: 16px;
+  --radius-pill: 9999px;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.10);
+  --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.14);
+
+  /* ========================================
+     4.2 레이아웃 규격
+     ======================================== */
+  --header-height: 56px;
+  --sidebar-width: 240px;
+  --sidebar-collapsed-width: 72px;
+  --content-max-width: 1200px;
+  --content-padding-desktop: 24px;
+  --content-padding-mobile: 16px;
+
+  /* ========================================
+     5.x 컴포넌트 규격
+     ======================================== */
+  /* Button */
+  --btn-height-sm: 32px;
+  --btn-height-md: 40px;
+  --btn-height-lg: 48px;
+  --btn-padding-sm: 12px;
+  --btn-padding-md: 16px;
+  --btn-padding-lg: 20px;
+
+  /* Input */
+  --input-height: 40px;
+  --input-height-lg: 48px;
+  --input-padding-x: 12px;
+
+  /* Table */
+  --table-header-height: 44px;
+  --table-row-height: 48px;
+
+  /* Modal */
+  --modal-width-sm: 360px;
+  --modal-width-md: 560px;
+  --modal-width-lg: 720px;
+
+  /* Minimum Touch Target */
+  --touch-target-min: 44px;
+}
+
+/* ========================================
+   Dark Mode (추후 확장용)
+   ======================================== */
+[data-theme="dark"] {
+  --color-bg: #0F172A;
+  --color-surface: #1E293B;
+  --color-surface-2: #334155;
+  --color-border: #334155;
+  --color-border-strong: #475569;
+  --color-text: #F8FAFC;
+  --color-text-muted: #CBD5E1;
+  --color-text-subtle: #94A3B8;
+}

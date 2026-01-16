@@ -1,0 +1,256 @@
+/* ==========================================================================
+   케이스 생성 페이지 스타일
+   상세서.md Section 7.4 기반
+   ========================================================================== */
+
+.case-create {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* Header */
+.case-create-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.case-create-title {
+    font: var(--text-display);
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* Content */
+.case-create-content {
+    min-height: 400px;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.step-title {
+    font: var(--text-h2);
+    color: var(--color-text);
+    margin: 0;
+}
+
+.step-description {
+    font: var(--text-body);
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+}
+
+/* Questionnaire */
+.questionnaire {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.questionnaire-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Scale Input */
+.scale-input {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.scale-label {
+    font: var(--text-caption);
+    color: var(--color-text);
+    display: flex;
+    justify-content: space-between;
+}
+
+.scale-value {
+    font: var(--text-body-m);
+    color: var(--color-primary);
+}
+
+.scale-slider {
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--color-surface-2);
+    border-radius: 4px;
+    outline: none;
+}
+
+.scale-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.scale-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.scale-labels {
+    display: flex;
+    justify-content: space-between;
+    font: var(--text-caption);
+    color: var(--color-text-muted);
+}
+
+/* Medical Notice */
+.medical-notice {
+    display: flex;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: var(--color-risk-medium-bg);
+    border-radius: var(--radius-input);
+    border-left: 3px solid var(--color-warning);
+}
+
+.medical-notice svg {
+    color: var(--color-warning);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.medical-notice p {
+    font: var(--text-body);
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Review Section */
+.review-section {
+    padding: var(--space-4);
+    background: var(--color-surface-2);
+    border-radius: var(--radius-input);
+}
+
+.review-section:not(:last-child) {
+    margin-bottom: var(--space-3);
+}
+
+.review-title {
+    font: var(--text-body-m);
+    color: var(--color-text);
+    margin: 0 0 var(--space-3) 0;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-3);
+}
+
+.review-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.review-label {
+    font: var(--text-caption);
+    color: var(--color-text-muted);
+}
+
+.review-value {
+    font: var(--text-body);
+    color: var(--color-text);
+}
+
+/* Actions */
+.case-create-actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .case-create {
+        max-width: none;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medication Chips */
+.medication-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.med-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.med-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background-color: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    font-size: 13px;
+    color: var(--color-text);
+}
+
+.med-chip button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: var(--color-text-subtle);
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.med-chip button:hover {
+    background: var(--color-danger);
+}

@@ -1,0 +1,68 @@
+/* ==========================================================================
+   로그인 페이지 스타일
+   상세서.md Section 7.1 기반
+   ========================================================================== */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+    padding: var(--space-4);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 360px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: var(--space-6);
+}
+
+.login-logo {
+    font-size: 48px;
+    display: block;
+    margin-bottom: var(--space-3);
+}
+
+.login-title {
+    font: var(--text-display);
+    color: var(--color-text);
+    margin: 0 0 var(--space-1) 0;
+}
+
+.login-subtitle {
+    font: var(--text-body);
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.login-error {
+    padding: var(--space-3);
+    background: var(--color-risk-high-bg);
+    color: var(--color-risk-high-text);
+    border-radius: var(--radius-input);
+    font: var(--text-body);
+    text-align: center;
+}
+
+.login-forgot {
+    display: block;
+    text-align: center;
+    margin-top: var(--space-4);
+    font: var(--text-caption);
+    color: var(--color-text-subtle);
+}
+
+.login-forgot:hover {
+    color: var(--color-primary);
+}

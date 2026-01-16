@@ -1,0 +1,122 @@
+/* ==========================================================================
+   동의/주의 고지 페이지 스타일
+   상세서.md Section 7.2 기반
+   ========================================================================== */
+
+.consent-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+    padding: var(--space-4);
+}
+
+.consent-card {
+    width: 100%;
+    max-width: 480px;
+}
+
+.consent-header {
+    text-align: center;
+    margin-bottom: var(--space-6);
+}
+
+.consent-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: var(--space-3);
+}
+
+.consent-title {
+    font: var(--text-display);
+    color: var(--color-text);
+    margin: 0 0 var(--space-2) 0;
+}
+
+.consent-subtitle {
+    font: var(--text-body);
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.consent-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.consent-item {
+    padding: var(--space-4);
+    background: var(--color-surface-2);
+    border-radius: var(--radius-input);
+    border: 1px solid var(--color-border);
+}
+
+.consent-checkbox {
+    display: flex;
+    gap: var(--space-3);
+    cursor: pointer;
+    align-items: flex-start;
+}
+
+.consent-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 2px solid var(--color-border-strong);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    margin-top: 2px;
+}
+
+.consent-checkbox input[type="checkbox"]:checked+.checkbox-custom {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.consent-checkbox input[type="checkbox"]:checked+.checkbox-custom::after {
+    content: '✓';
+    color: var(--color-on-primary);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.consent-checkbox input[type="checkbox"]:focus-visible+.checkbox-custom {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.consent-text {
+    font: var(--text-body);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.consent-text strong {
+    color: var(--color-primary);
+}
+
+.consent-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+    font: var(--text-caption);
+}
+
+.consent-links a {
+    color: var(--color-text-subtle);
+}
+
+.consent-links span {
+    color: var(--color-border);
+}

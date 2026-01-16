@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Card 컴포넌트 스타일
+   상세서.md Section 5.6 기반
+   ========================================================================== */
+
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-4);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-3);
+}
+
+.card-title {
+    font: var(--text-h3);
+    color: var(--color-text);
+    margin: 0;
+}
+
+.card-action {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+/* Clickable Card */
+.card-clickable {
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font: inherit;
+}
+
+.card-clickable:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-border-strong);
+}
+
+.card-clickable:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}

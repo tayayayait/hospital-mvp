@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Stepper 컴포넌트 스타일
+   상세서.md Section 5.11 기반
+   ========================================================================== */
+
+.stepper {
+    width: 100%;
+}
+
+/* Desktop Stepper */
+.stepper-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: var(--space-4);
+}
+
+.stepper-item {
+    display: flex;
+    align-items: center;
+}
+
+.stepper-step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: none;
+    border: none;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-input);
+    cursor: default;
+    transition: all 0.2s ease;
+    font-family: var(--font-family);
+}
+
+.stepper-step:not(:disabled) {
+    cursor: pointer;
+}
+
+.stepper-step:not(:disabled):hover {
+    background: var(--color-surface-2);
+}
+
+.stepper-number {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--color-surface-2);
+    color: var(--color-text-muted);
+    transition: all 0.2s ease;
+}
+
+.stepper-step.current .stepper-number {
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+.stepper-step.completed .stepper-number {
+    background: var(--color-success);
+    color: white;
+}
+
+.stepper-label {
+    font: var(--text-body-m);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.stepper-step.current .stepper-label {
+    color: var(--color-text);
+}
+
+.stepper-step.completed .stepper-label {
+    color: var(--color-text);
+}
+
+.stepper-connector {
+    width: 40px;
+    height: 2px;
+    background: var(--color-border);
+    margin: 0 var(--space-2);
+    transition: background 0.2s ease;
+}
+
+.stepper-connector.completed {
+    background: var(--color-success);
+}
+
+/* Mobile Stepper */
+.stepper-mobile {
+    display: none;
+    flex-direction: column;
+    gap: var(--space-2);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: var(--space-4);
+}
+
+.stepper-progress {
+    height: 4px;
+    background: var(--color-surface-2);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.stepper-progress-bar {
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.stepper-mobile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stepper-mobile-step {
+    font: var(--text-caption);
+    color: var(--color-text-muted);
+}
+
+.stepper-mobile-label {
+    font: var(--text-body-m);
+    color: var(--color-text);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .stepper-desktop {
+        display: none;
+    }
+
+    .stepper-mobile {
+        display: flex;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 768px) {
+    .stepper-label {
+        display: none;
+    }
+
+    .stepper-connector {
+        width: 24px;
+    }
+}

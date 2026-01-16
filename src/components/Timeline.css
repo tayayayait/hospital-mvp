@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Timeline 컴포넌트 스타일
+   상세서.md Section 7.7 기반
+   ========================================================================== */
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-item {
+    display: flex;
+    gap: var(--space-4);
+    position: relative;
+}
+
+.timeline-item:not(.last) {
+    padding-bottom: var(--space-6);
+}
+
+/* Marker */
+.timeline-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: 50%;
+    font-size: 16px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.timeline-icon-info {
+    border-color: var(--color-info);
+    background: rgba(14, 165, 233, 0.1);
+}
+
+.timeline-icon-success {
+    border-color: var(--color-success);
+    background: rgba(22, 163, 74, 0.1);
+}
+
+.timeline-icon-warning {
+    border-color: var(--color-warning);
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.timeline-icon-danger {
+    border-color: var(--color-danger);
+    background: rgba(220, 38, 38, 0.1);
+}
+
+.timeline-line {
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% - 36px);
+    background: var(--color-border);
+}
+
+/* Content */
+.timeline-content {
+    flex: 1;
+    padding-top: var(--space-1);
+    min-width: 0;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-1);
+}
+
+.timeline-label {
+    font: var(--text-body-m);
+    color: var(--color-text);
+}
+
+.timeline-time {
+    font: var(--text-caption);
+    color: var(--color-text-subtle);
+    flex-shrink: 0;
+}
+
+.timeline-title {
+    font: var(--text-body);
+    color: var(--color-text);
+    margin: 0 0 var(--space-1) 0;
+}
+
+.timeline-description {
+    font: var(--text-body);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-1) 0;
+}
+
+.timeline-user {
+    font: var(--text-caption);
+    color: var(--color-text-subtle);
+}
+
+/* Empty State */
+.timeline-empty {
+    padding: var(--space-8);
+    text-align: center;
+    color: var(--color-text-muted);
+    font: var(--text-body);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .timeline-item {
+        gap: var(--space-3);
+    }
+
+    .timeline-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .timeline-line {
+        top: 32px;
+        height: calc(100% - 32px);
+    }
+}
